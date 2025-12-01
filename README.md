@@ -64,7 +64,7 @@ Escolha uma opção: 1
 Nome do produto: Caneta
 Preço do produto (R$): 1.50
 Quantidade em estoque: 100
-✔ Produto 'Caneta' cadastrado com sucesso!
+ Produto 'Caneta' cadastrado com sucesso!
 
 Escolha uma opção: 2
 ==== Lista de Produtos ====
