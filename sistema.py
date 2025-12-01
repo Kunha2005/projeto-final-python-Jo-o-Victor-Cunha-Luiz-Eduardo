@@ -4,12 +4,9 @@ def cadastrar_produto():
     """Função para cadastrar um novo produto."""
     print('\n==== Cadastrar Produto ====')
     nome = input('Nome do produto: ').strip()
-    # Validar nome não vazio
     while not nome:
         print('Nome não pode ser vazio. Tente novamente.')
         nome = input('Nome do produto: ').strip()
-
-    # Validar preço não negativo
     while True:
         try:
             preco = float(input('Preço do produto: R$ '))
@@ -20,7 +17,6 @@ def cadastrar_produto():
         except ValueError:
             print('Por favor, digite um valor numérico para o preço.')
 
-    # Validar estoque não negativo
     while True:
         try:
             estoque = int(input('Quantidade em estoque: '))
@@ -31,7 +27,6 @@ def cadastrar_produto():
         except ValueError:
             print('Por favor, digite um número inteiro para a quantidade.')
 
-    # Criar dicionário do produto e adicionar na lista
     produto = {
         'nome': nome,
         'preco': preco,
@@ -60,7 +55,6 @@ def atualizar_produto():
         return
 
     listar_produtos()
-    # Selecionar produto pelo índice
     try:
         escolha = int(input('Digite o número do produto que deseja atualizar: '))
         if 1 <= escolha <= len(produtos):
@@ -71,14 +65,11 @@ def atualizar_produto():
     except ValueError:
         print('Entrada inválida. Retornando ao menu principal.')
         return
-
-    # Novos dados do produto
+        
     print(f"Atualizando produto: {produto['nome']}")
     novo_nome = input('Novo nome (deixe vazio para manter atual): ').strip()
     if novo_nome:
         produto['nome'] = novo_nome
-
-    # Atualizar preço
     while True:
         novo_preco = input('Novo preço (deixe vazio para manter atual): R$ ').strip()
         if novo_preco == '':
@@ -92,8 +83,7 @@ def atualizar_produto():
                 break
         except ValueError:
             print('Por favor, digite um valor numérico para o preço.')
-
-    # Atualizar estoque
+e
     while True:
         novo_estoque = input('Novo estoque (deixe vazio para manter atual): ').strip()
         if novo_estoque == '':
